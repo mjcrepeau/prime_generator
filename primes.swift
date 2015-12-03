@@ -21,8 +21,20 @@ TODO:
         and count in increments of 2p in step 3, thus marking only odd multiples of p.
         This actually appears in the original algorithm.
 */
+import Darwin   // Needed to call exit()
 
-let n = 100
+var number = 0
+
+if Process.arguments.count != 2 {
+        print("A simple prime number generator!")
+        print("Usage: primes [n]")
+        print("Generates the prime numbers between 2 and n")
+        exit(0)
+} else {
+        number = Int(Process.arguments[1])!
+}
+
+let n = number
 var primes: [Int] = []          // Array to hold the primes
 for var i = 0; i < n; i++ {
         primes.append(i)        // Step 1
