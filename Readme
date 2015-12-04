@@ -1,0 +1,3 @@
+This is a quick program to calculate prime numbers using the Sieve of Eratosthenes.
+Currently, there are no optimizations implemented.
+I can successfully run it with an n value of 100,000,000. This uses about a gig of RAM.
