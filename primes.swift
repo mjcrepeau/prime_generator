@@ -62,3 +62,5 @@ for var i = 2; i < n; i++ {
                 print("\(primes[i])")
         }
 }
+
+print("Hello!")
