@@ -2,9 +2,26 @@ This is a quick program to calculate prime numbers using the Sieve of Eratosthen
 Currently, there are no optimizations implemented.
 I can successfully run it with an n value of 100,000,000. This uses about a gig of RAM.
 
+Compile with: xcrun -sdk macosx swiftc -g primes.swift
+
+Applies the following algorithm for the Sieve of Eratosthenes:
+1. Create a list of consecutive integers from 2 through n: (2, 3, 4, ..., n).
+2. Initially, let p equal 2, the first prime number.
+3. Starting from p, enumerate its multiples by counting to n in increments of p,
+        and mark them in the list (these will be 2p, 3p, 4p, etc.;
+        the p itself should not be marked).
+4. Find the first number greater than p in the list that is not marked.
+        If there was no such number, stop.
+        Otherwise, let p now equal this new number (which is the next prime), and repeat from step 3.
+
+TODO:
+1. As a refinement, it is sufficient to mark the numbers in step 3 starting from p2,
+        as all the smaller multiples of p will have already been marked at that point.
+        This means that the algorithm is allowed to terminate in step 4 when p2 is greater than n.
+2. Another refinement is to initially list odd numbers only, (3, 5, ..., n),
+        and count in increments of 2p in step 3, thus marking only odd multiples of p.
+        This actually appears in the original algorithm.
+
 Swift Version:
 Apple Swift version 2.1 (swiftlang-700.1.101.6 clang-700.1.76)
 Target: x86_64-apple-darwin15.0.0
-
-Compile this file with:
-xcrun -sdk macosx swiftc -g primes.swift
