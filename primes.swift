@@ -3,6 +3,8 @@ Written by Matthew Crepeau
 12/3/2015
 Calculates the prime numbers between 2 and n
 
+Compile with: xcrun -sdk macosx swiftc -g primes.swift
+
 Applies the following algorithm for the Sieve of Eratosthenes:
 1. Create a list of consecutive integers from 2 through n: (2, 3, 4, ..., n).
 2. Initially, let p equal 2, the first prime number.
@@ -60,3 +62,5 @@ for var i = 2; i < n; i++ {
                 print("\(primes[i])")
         }
 }
+
+print("Fin")
