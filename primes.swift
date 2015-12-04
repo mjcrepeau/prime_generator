@@ -19,7 +19,7 @@ if Process.arguments.count != 2 {
 let n = number
 var primes: [Int] = []          // Array to hold the primes
 for var i = 0; i < n; i++ {
-        primes.append(i)        // Step 1
+        primes.append(i)        // Step 1 (see readme for steps)
 }
 
 var j = 0
