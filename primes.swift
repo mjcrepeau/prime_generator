@@ -24,13 +24,13 @@ for var i = 0; i < n; i++ {
 var j = 0
 var p = 1       // Step 2
 
-while p < n {
+while p*p < n {
         j = 0
         while p+j < n && (primes[p + j] <= p || primes[p + j] == 0) {   // Step 4
                 j++
         }
         p = p + j
-        for var i = 2; p*i < n; i++ {   // Step 3
+        for var i = p; p*i < n; i++ {   // Step 3
                 primes[p*i] = 0         // Mark non-primes as 0
         }
 }
