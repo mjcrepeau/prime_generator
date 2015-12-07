@@ -21,10 +21,12 @@ Implemented Refinements:
    as all the smaller multiples of p will have already been marked at that point.
    This means that the algorithm is allowed to terminate in step 4 when p^2 is greater than n.
 
-TODO:
 2. Another refinement is to initially list odd numbers only, (3, 5, ..., n),
    and count in increments of 2p in step 3, thus marking only odd multiples of p.
    This actually appears in the original algorithm.
+   NOTE: All array indexing is done by dividing the current odd number by 2.
+        This solves the problem of getting to the odd numbers in an array with
+        even indexing.
 
 
 Swift Version:
