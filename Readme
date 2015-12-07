@@ -1,6 +1,7 @@
 This is a quick program to calculate prime numbers using the Sieve of Eratosthenes.
-Currently, there are no optimizations implemented.
-I can successfully run it with an n value of 100,000,000. This uses about a gig of RAM.
+I have implemented two optimizations as well.
+I can successfully run it with an n value of 1,000,000,000. This uses about 4 gigs of RAM.
+        If saved to a file, it will generate about 500 MB.
 
 Compile with: xcrun -sdk macosx swiftc -g primes.swift
 
